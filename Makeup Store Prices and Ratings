@@ -1,0 +1,27 @@
+-- Creating a table 
+
+CREATE TABLE Makeup(id integer primary key, name text, category text, price integer, rating integer);
+Insert into Makeup values(1, "primer", "Face", 7, 8);
+Insert into Makeup values(2, "foundation", "face", 12, 10);
+Insert into Makeup values(3, "concealer", "Face", 10, 9);
+Insert into makeup values(4, "contour", "face", 14, 10);
+Insert into makeup values(5, "blush", "Face", 14, 10);
+Insert into makeup values(6, "highlight", "Face", 14, 10);
+Insert into makeup values(7, "setting_powder", "face", 10, 8);
+Insert into makeup values(8, "setting_Spray", "face", 10, 9);
+Insert into makeup values(9, "eyebrow_pencil", "eyes", 6, 8);
+Insert into makeup values(10, "eyeshadow", "eyes", 16, 10);
+Insert into makeup values (11, "eyeliner", "eyes", 6, 9);
+Insert into makeup values (12, "mascara", "eyes", 8, 9); 
+Insert into makeup values(13, "lipliner", "lips", 7, 6); 
+Insert into makeup values(14, "lipstick", "lips", 7,6); 
+Insert into makeup values(15, "lipgloss", "lips", 8, 9);
+
+-- display the database based on prices >10 
+SELECT * from makeup where price >10;
+
+-- display the database ordered by price
+SELECT * from makeup where price order by price asc;
+
+-- display the total price in each category 
+SELECT category, SUM(price) from makeup where price group by category;
